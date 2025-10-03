@@ -5,7 +5,7 @@ let taskBody = document.getElementById("task-body");
 
 document.addEventListener("DOMContentLoaded", loadTasks);
 
-const API_URL = "/api/tasks";
+const API_URL = "https://todo-fullstack-0l8e.onrender.com/api/tasks";
 async function loadTasks() {
   try {
     const res = await fetch(API_URL);

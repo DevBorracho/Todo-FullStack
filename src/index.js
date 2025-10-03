@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 // API
-app.use("/api/tasks", tasksRoutes);
+app.use("/api", tasksRoutes);
 
 // __dirname en ESModules
 const __filename = fileURLToPath(import.meta.url);
