@@ -18,27 +18,11 @@ app.use("/api", tasksRoutes);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// ✅ Servir tu frontend (HTML, CSS, JS)
-import { Router } from "express";
-import {
-  getTasksController,
-  postTaskController,
-  deleteTaskController,
-} from "../controllers/tasks.js";
-
 const router = Router();
 
 router.get("/tasks", getTasksController);
 router.post("/tasks", postTaskController);
 router.delete("/tasks/:id", deleteTaskController);
-
-export default router;
-import { Router } from "express";
-import {
-  getTasksController,
-  postTaskController,
-  deleteTaskController,
-} from "../controllers/tasks.js";
 
 app.use(express.static(path.join(__dirname, "../client")));
 app.get("*", (req, res) => {
