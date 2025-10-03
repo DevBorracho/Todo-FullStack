@@ -19,16 +19,30 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // ✅ Servir tu frontend (HTML, CSS, JS)
+import { Router } from "express";
+import {
+  getTasksController,
+  postTaskController,
+  deleteTaskController,
+} from "../controllers/tasks.js";
+
+const router = Router();
+
+router.get("/tasks", getTasksController);
+router.post("/tasks", postTaskController);
+router.delete("/tasks/:id", deleteTaskController);
+
+export default router;
+import { Router } from "express";
+import {
+  getTasksController,
+  postTaskController,
+  deleteTaskController,
+} from "../controllers/tasks.js";
+
 app.use(express.static(path.join(__dirname, "../client")));
-
-// ✅ Ruta raíz
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/HTML/index.html"));
-});
-
-// ✅ Fallback opcional (para SPAs o rutas no encontradas)
-app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "../client/HTML/index.html"));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/index.html"));
 });
 
 // Iniciar servidor
