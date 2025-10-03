@@ -10,8 +10,10 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("DATABASE_URL")  // Para runtime
+  directUrl = env("DIRECT_URL")   // Para migraciones
 }
+
 
 model Task{
   id String @id @default(uuid())

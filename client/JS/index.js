@@ -5,7 +5,7 @@ let taskBody = document.getElementById("task-body");
 
 document.addEventListener("DOMContentLoaded", loadTasks);
 
-const API_URL = "http://localhost:3000/api/tasks";
+const API_URL = "/api/tasks";
 async function loadTasks() {
   try {
     const res = await fetch(API_URL);

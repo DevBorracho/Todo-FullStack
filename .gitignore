@@ -11,9 +11,7 @@ prisma/migrations/
 dist/
 build/
 
-# Static files (si se generan automáticamente)
-public/
-static/
+
 
 # Logs
 *.log
