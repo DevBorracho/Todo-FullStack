@@ -1,0 +1,14 @@
+### Obtener todas las tareas
+GET http://localhost:3000/tasks
+
+### Crear una nueva tarea
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "title": "Nueva tarea 3",
+  "description": "Aqui va una Descripcion"
+}
+
+### Eliminar una tarea
+DELETE http://localhost:3000/tasks/ff17b073-4dc8-456e-8825-e1e299bfc01d

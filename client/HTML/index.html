@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <title>TODO LIST</title>
+  </head>
+  <body>
+    <main class="card">
+      <section class="form-section">
+        <h2>Agregar tarea</h2>
+        <form id="task-form">
+          <input type="text" id="title" placeholder="Título" required />
+          <input
+            type="text"
+            id="description"
+            placeholder="Descripción"
+            required />
+          <button type="submit">Agregar</button>
+        </form>
+      </section>
+
+      <section class="table-section">
+        <h2>Lista de tareas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Título</th>
+              <th>Descripción</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="task-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="../JS/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+prisma/migrations/
+.env
+
+# Build output
+dist/
+build/
+
+# Static files (si se generan automáticamente)
+public/
+static/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Others
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
